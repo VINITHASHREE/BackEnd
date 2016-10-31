@@ -3,7 +3,6 @@ package com.niit.modal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,16 +15,16 @@ public class Supplier {
 	
 	@Id
 	@Column
-	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+	@GeneratedValue
 	private int supplierid; 
 	@Column
-	private String suppliername;
+	private String sn;
 	@Column
-	private String emailaddress;
+	private String em;
 	@Column
-	private String address;
+	private String addr;
 	@Column
-	private int mobilenumber;
+	private int mn;
 	
 
 
@@ -35,31 +34,31 @@ public class Supplier {
 	public void setSupplierId(int supplierid) {
 	 this.supplierid = supplierid;
 	}
-	public String getSupplierName() {
-	 return suppliername;
+	public String getSn() {
+		return sn;
 	}
-	public void setSupplierName(String suppliername) {
-	 this.suppliername = suppliername;
+	public void setSn(String sn) {
+		this.sn = sn;
 	}
-	public String getEmailAddress() {
-	 return emailaddress;
+	public String getEm() {
+		return em;
 	}
-	public void setEmailAddress(String emailaddress) {
-	 this.emailaddress = emailaddress;
+	public void setEm(String em) {
+		this.em = em;
 	}
-	public String getAddress() {
-		 return address;
-		}
-		public void setAddress(String address) {
-		 this.address = address;
-		}
+	public String getAddr() {
+		return addr;
+	}
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+	public int getMn() {
+		return mn;
+	}
+	public void setMn(int mn) {
+		this.mn = mn;
+	}
 	
-	public int getMobileNumber() {
-		 return mobilenumber;
-	}
-	public void setMobileNumber(int mobilenumber) {
-	 this.mobilenumber = mobilenumber;
-	}
 	
 
 

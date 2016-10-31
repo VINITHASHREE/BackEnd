@@ -31,16 +31,16 @@ public class UserTest {
 		User user=(User) context.getBean("user");
 		
 		
-		user.setUserName("vinitha");
-		user.setEmailAddress("vinithashreeprabhakaran@gmail.com");
+	/*	user.setUN("vinitha");
+		user.setEA("vinithashreeprabhakaran@gmail.com");
 		user.setPassword("shree");
-		user.setMobileNumber(9585);
+		user.setMM(9585);
 		user.setAddress("Thennampalayam");
- 
+ */
 		userDAO.insertUser(user);
 
 		
-		 ProductDAO productDAO=(ProductDAO) context.getBean("ProductDAO");
+		/* ProductDAO productDAO=(ProductDAO) context.getBean("ProductDAO");
 		 Product product=(Product) context.getBean("product");
 			
 		 
@@ -70,10 +70,10 @@ public class UserTest {
 		 Supplier supplier=(Supplier) context.getBean("supplier");
 		 
 		 
-		 supplier.setSupplierName("Supriga");
-		 supplier.setEmailAddress("suprigavivek03@gmail.com");
-		 supplier.setAddress("Peelamedu");
-		 supplier.setMobileNumber(956642);
+		 supplier.setSN("Supriga");
+		 supplier.setEM("suprigavivek03@gmail.com");
+		 supplier.setAddr("Peelamedu");
+		 supplier.setMn(956642);
 		 
 		 supplierDAO.insertSupplier(supplier);
 		 
@@ -99,7 +99,7 @@ public class UserTest {
 		  shipping.setAddress("peelamedu");
 		  
 		
-		  shippingDAO.insertShipping(shipping);
+		  shippingDAO.insertShipping(shipping);*/
 		  
 		  
 		  
@@ -107,10 +107,10 @@ public class UserTest {
 		RoleDAO roleDAO=(RoleDAO) context.getBean("RoleDAO");
 		  Role role=(Role) context.getBean("role");
 		  
-		 role.setRoleid(1);
-		 role.setUserid(1);
+		// role.setRoleid(1);
+		 //role.setUserid(1);
 		  role.setRole("user");
-		  role.setEnabled("true");
+		 
 		  
 		  user.setRole(role);
 		  role.setUser(user);
@@ -121,7 +121,7 @@ public class UserTest {
 //		  roleDAO.insertRole(role);
 			
 		  
-		  CardDAO cardDAO=(CardDAO) context.getBean("CardDAO");
+		 /* CardDAO cardDAO=(CardDAO) context.getBean("CardDAO");
 		  Card card=(Card) context.getBean("card");
 		  
 		  
@@ -131,7 +131,7 @@ public class UserTest {
 		  card.setCardType("credit") ; 
 		  
 		  
-		  cardDAO.insertCard(card);
+		  cardDAO.insertCard(card);*/
 		  
 		  
 		  

@@ -20,7 +20,7 @@ public class Product {
     private int productid;
 	
 	@Column
-	private String productname ; 
+	private String pn; 
 	@Column
 	private String description;
 	@Column
@@ -28,9 +28,9 @@ public class Product {
 	@Column
 	private int price ; 
 	@Column
-	private int categoryid;
+	private int cid;
 	@Column
-	private int supplierid;
+	private int sid;
 	@Column
 	private int size ; 
 
@@ -41,12 +41,7 @@ public class Product {
 	public void setProductId(int productid) {
 		this.productid = productid;
 	}
-	public String getProductName() {
-	 return productname;
-	}
-	public void setProductName(String productname) {
-	    this.productname = productname;
-	}
+	
 	public String getDescription() {
 	 return description;
 	}
@@ -65,18 +60,25 @@ public class Product {
 			public void setPrice(int price) {
 				this.price = price;
 			}
-			public int getCategoryId() {
-				 return categoryid;
-				}
-				public void setCategoryId(int categoryid) {
-					this.categoryid = categoryid;
-				}
-				public int getSupplierId() {
-					 return supplierid;
-					}
-					public void setSupplierId(int supplierid) {
-						this.supplierid = supplierid;
-					}
+			
+					public String getPn() {
+				return pn;
+			}
+			public void setPn(String pn) {
+				this.pn = pn;
+			}
+			public int getCid() {
+				return cid;
+			}
+			public void setCid(int cid) {
+				this.cid = cid;
+			}
+			public int getSid() {
+				return sid;
+			}
+			public void setSid(int sid) {
+				this.sid = sid;
+			}
 					public int getSize() {
 						 return size;
 						}

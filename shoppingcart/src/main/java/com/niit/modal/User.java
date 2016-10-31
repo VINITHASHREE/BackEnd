@@ -19,15 +19,34 @@ public class User {
 	@GeneratedValue
 private int userid; 
 	
-	@Column
-private String username;
-	@Column
-private String emailaddress;
-	@Column
+
+private String un;
+
+private String em;
+
 private String password;
-    @Column
-private int mobilenumber;
-    @Column
+
+private long mm;
+
+private String rolename;
+
+private boolean enabled;
+
+
+
+
+public boolean getEnabled() {
+	return enabled;
+}
+public void setEnabled(boolean enabled) {
+	this.enabled = enabled;
+}
+public String getRolename() {
+	return rolename;
+}
+public void setRolename(String rolename) {
+	this.rolename = rolename;
+}
 private String address;
 
     
@@ -50,29 +69,33 @@ public int getUserId() {
 public void setUserId(int userid) {
  this.userid = userid;
 }
-public String getUserName() {
- return username;
-}
-public void setUserName(String username) {
- this.username = username;
-}
-public String getEmailAddress() {
- return emailaddress;
-}
-public void setEmailAddress(String emailaddress) {
- this.emailaddress = emailaddress;
-}
+
 public String Password() {
 	 return password;
 }
 public void setPassword(String password) {
  this.password = password;
 }
-public int getMobileNumber() {
-	 return mobilenumber;
+
+
+
+public String getUn() {
+	return un;
 }
-public void setMobileNumber(int mobilenumber) {
- this.mobilenumber = mobilenumber;
+public void setUn(String un) {
+	this.un = un;
+}
+public String getEm() {
+	return em;
+}
+public void setEm(String em) {
+	this.em = em;
+}
+public long getMm() {
+	return mm;
+}
+public void setMm(long mm) {
+	this.mm = mm;
 }
 public String getAddress() {
  return address;

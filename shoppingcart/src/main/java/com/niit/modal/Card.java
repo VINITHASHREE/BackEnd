@@ -3,7 +3,6 @@ package com.niit.modal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -17,7 +16,7 @@ public class Card {
 	
 	@Id
 	@Column
-	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+	@GeneratedValue
 
 	private int cardid ;
 	@Column

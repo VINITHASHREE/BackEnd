@@ -30,11 +30,21 @@ private int roleid;
 	@Column
 private String role;
 	@Column
-private String username;
+private String un;
+	public String getUn() {
+		return un;
+	}
+
+
+	public void setUn(String un) {
+		this.un = un;
+	}
+
+
 	@Column
 private String password;
 	@Column
-private String enabled;
+private boolean enabled;
 
 
 @OneToOne(cascade=CascadeType.ALL)
@@ -72,14 +82,6 @@ public void setRole(String role) {
 }
 
 
-public String getUsername() {
-	return username;
-}
-
-
-public void setUsername(String username) {
-	this.username = username;
-}
 
 
 public String getPassword() {
@@ -92,15 +94,6 @@ public void setPassword(String password) {
 }
 
 
-public String getEnabled() {
-	return enabled;
-}
-
-
-public void setEnabled(String enabled) {
-	this.enabled = enabled;
-}
-
 
 public User getUser() {
 	return user;
@@ -110,6 +103,15 @@ public User getUser() {
 public void setUser(User user) {
 	this.user = user;
 }
+public boolean getEnabled() {
+	return enabled;
+}
+
+
+public void setEnabled(boolean enabled) {
+	this.enabled = enabled;
+}
+
 
 
 }

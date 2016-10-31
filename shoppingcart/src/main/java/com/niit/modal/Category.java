@@ -21,9 +21,9 @@ public class Category {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int categoryid;
 	@Column
-	private String categoryname;  
+	private String cn;  
 	@Column
-	private String categorydesc; 
+	private String cd; 
 
 public int getCategoryId() {
 	 return categoryid;
@@ -31,16 +31,17 @@ public int getCategoryId() {
 	public void setCategoryId(int categoryid) {
 		this.categoryid = categoryid;
 	}
-public String getCategoryName() {
- return categoryname;
-}
-public void setCategoryName(String categoryname) {
-	this.categoryname = categoryname;
-}
-public String getCategoryDesc() {
-	 return categorydesc ;
+	public String getCn() {
+		return cn;
 	}
-	public void setCategoryDesc(String categorydesc) {
-		this.categorydesc = categorydesc;
+	public void setCn(String cn) {
+		this.cn = cn;
 	}
+	public String getCd() {
+		return cd;
+	}
+	public void setCd(String cd) {
+		this.cd = cd;
+	}
+
 }
