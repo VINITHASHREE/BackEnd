@@ -20,7 +20,7 @@ public class Shipping {
 	@Column
 	private int userid ;
 	@Column
-	private int productid ; 
+	private int id ; 
 	@Column
 	private int price ; 
 	@Column
@@ -42,12 +42,13 @@ public class Shipping {
 		public void setUserId(int userid) {
 		    this.userid = userid;
 		}
-		public int getProductId() {
-			 return productid;
-			}
-			public void setProductId(int productid) {
-			    this.productid = productid;
-			}
+		
+		public int getId() {
+			return id;
+		}
+		public void setId(int id) {
+			this.id = id;
+		}
 		public int getPrice() {
 			 return price;
 			}

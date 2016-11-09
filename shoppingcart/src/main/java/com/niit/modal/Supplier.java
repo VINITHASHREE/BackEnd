@@ -8,15 +8,15 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-@Entity 
+@Entity
 @Table(name = "Supplier")
 @Component
 public class Supplier {
-	
+
 	@Id
 	@Column
 	@GeneratedValue
-	private int supplierid; 
+	private int supplierid;
 	@Column
 	private String sn;
 	@Column
@@ -25,41 +25,45 @@ public class Supplier {
 	private String addr;
 	@Column
 	private int mn;
-	
-
 
 	public int getSupplierId() {
-	 return supplierid;
+		return supplierid;
 	}
+
 	public void setSupplierId(int supplierid) {
-	 this.supplierid = supplierid;
+		this.supplierid = supplierid;
 	}
+
 	public String getSn() {
 		return sn;
 	}
+
 	public void setSn(String sn) {
 		this.sn = sn;
 	}
+
 	public String getEm() {
 		return em;
 	}
+
 	public void setEm(String em) {
 		this.em = em;
 	}
+
 	public String getAddr() {
 		return addr;
 	}
+
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
+
 	public int getMn() {
 		return mn;
 	}
+
 	public void setMn(int mn) {
 		this.mn = mn;
 	}
-	
-	
-
 
 }

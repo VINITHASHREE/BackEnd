@@ -8,7 +8,7 @@ import com.niit.modal.Cart;
 public interface CartDAO {
 
 	 public List<Cart> getAllCart();
-	   public Cart getCart(int cartid);
+	   public List<Cart> getCart(String username);
 	   public void insertCart(Cart cart);
 	   public void updateCart(Cart cart);
 	   public void deleteCart(int id);

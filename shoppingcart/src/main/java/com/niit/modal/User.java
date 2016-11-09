@@ -28,8 +28,6 @@ private String password;
 
 private long mm;
 
-private String rolename;
-
 private boolean enabled;
 
 
@@ -41,27 +39,8 @@ public boolean getEnabled() {
 public void setEnabled(boolean enabled) {
 	this.enabled = enabled;
 }
-public String getRolename() {
-	return rolename;
-}
-public void setRolename(String rolename) {
-	this.rolename = rolename;
-}
-private String address;
 
-    
-    @OneToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name="userid")
-     
-    private Role role;
-    
-    public Role getRole() {
-		return role;
-	}
-	public void setRole(Role role) {
-		this.role = role;
-	}
-	
+private String address;
 	
 public int getUserId() {
  return userid;
@@ -70,14 +49,12 @@ public void setUserId(int userid) {
  this.userid = userid;
 }
 
-public String Password() {
+public String getPassword() {
 	 return password;
 }
 public void setPassword(String password) {
  this.password = password;
 }
-
-
 
 public String getUn() {
 	return un;

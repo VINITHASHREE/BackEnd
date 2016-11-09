@@ -15,10 +15,17 @@ import org.springframework.stereotype.Component;
 
 public class Product {
 	@Id
-	@Column
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int productid;
+	@Column(name="id")
+	@GeneratedValue
+    private int id;
 	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	@Column
 	private String pn; 
 	@Column
@@ -28,64 +35,61 @@ public class Product {
 	@Column
 	private int price ; 
 	@Column
-	private int cid;
+	private String cn;
 	@Column
-	private int sid;
+	private String sn;
 	@Column
-	private int size ; 
-
-
-	public int getProductId() {
-	 return productid;
-	}
-	public void setProductId(int productid) {
-		this.productid = productid;
-	}
+	private int size ;
 	
+	public String getPn() {
+		return pn;
+	}
+	public void setPn(String pn) {
+		this.pn = pn;
+	}
 	public String getDescription() {
-	 return description;
+		return description;
 	}
 	public void setDescription(String description) {
 		this.description = description;
 	}
 	public int getQuantity() {
-		 return quantity;
-		}
-		public void setQuantity(int quantity) {
-			this.quantity = quantity;
-		}
-		public int getPrice() {
-			 return price;
-			}
-			public void setPrice(int price) {
-				this.price = price;
-			}
-			
-					public String getPn() {
-				return pn;
-			}
-			public void setPn(String pn) {
-				this.pn = pn;
-			}
-			public int getCid() {
-				return cid;
-			}
-			public void setCid(int cid) {
-				this.cid = cid;
-			}
-			public int getSid() {
-				return sid;
-			}
-			public void setSid(int sid) {
-				this.sid = sid;
-			}
-					public int getSize() {
-						 return size;
-						}
-						public void setSize(int size) {
-							this.size = size;
-						}
-						
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	
+	public String getCn() {
+		return cn;
+	}
+	public void setCn(String cn) {
+		this.cn = cn;
+	}
+	
+	
+	public String getSn() {
+		return sn;
+	}
+	public void setSn(String sn) {
+		this.sn = sn;
+	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	} 
+
+
+	
 }	
 	
 	

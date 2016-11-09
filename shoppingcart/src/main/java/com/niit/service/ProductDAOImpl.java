@@ -48,7 +48,7 @@ public class ProductDAOImpl implements ProductDAO {
 	@Transactional
 	public void deleteProduct(int id) {
 		Product deleteProduct=new Product();
-		deleteProduct.setProductId(id);
+		deleteProduct.setId(id);
 		sessionFactory.getCurrentSession().delete(deleteProduct);
 	}
 

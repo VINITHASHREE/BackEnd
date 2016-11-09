@@ -31,32 +31,32 @@ public class UserTest {
 		User user=(User) context.getBean("user");
 		
 		
-	/*	user.setUN("vinitha");
-		user.setEA("vinithashreeprabhakaran@gmail.com");
+		user.setUn("vinitha");
+		user.setEm("vinithashreeprabhakaran@gmail.com");
 		user.setPassword("shree");
-		user.setMM(9585);
+		user.setMm(9585);
 		user.setAddress("Thennampalayam");
- */
+ 
 		userDAO.insertUser(user);
 
 		
-		/* ProductDAO productDAO=(ProductDAO) context.getBean("ProductDAO");
+		 ProductDAO productDAO=(ProductDAO) context.getBean("ProductDAO");
 		 Product product=(Product) context.getBean("product");
 			
 		 
-		 product.setProductName("kurtis") ; 
+		 product.setPn("kurtis") ; 
 		 product.setDescription("cotton,synthetic kurtis");
 		 product.setQuantity(10);
 		 product.setPrice(700); 
-		 product.setCategoryId(1);
-		 product.setSupplierId(1);
+		 product.setCn("clothing");
+		 product.setSn("maruthi");
 		 product.setSize(38); 	
 		 
 		 productDAO.insertProduct(product);
 
 	
 	
-		 CategoryDAO categoryDAO=(CategoryDAO) context.getBean("CategoryDAO");
+		/* CategoryDAO categoryDAO=(CategoryDAO) context.getBean("CategoryDAO");
 		 Category category=(Category) context.getBean("category");
 		 
 		 category.setCategoryName("clothing");
@@ -105,15 +105,21 @@ public class UserTest {
 		  
 		 
 		RoleDAO roleDAO=(RoleDAO) context.getBean("RoleDAO");
-		  Role role=(Role) context.getBean("role");
+		Role role=(Role) context.getBean("role");
 		  
-		// role.setRoleid(1);
-		 //role.setUserid(1);
-		  role.setRole("user");
+	
+		role.setRole("user");
+		role.setUn("vinitha");
+		role.setEnabled(true);
+		role.setPassword("shree");
+		
 		 
-		  
-		  user.setRole(role);
+
 		  role.setUser(user);
+		
+	User user1 = userDAO.getUser("shree");
+	System.out.println(user1.getUn());
+	
 		  
 		  
 		  

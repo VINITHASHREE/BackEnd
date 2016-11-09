@@ -20,11 +20,7 @@ public class Role {
 	
 	@Id
 	@Column
-	@GeneratedValue(generator="newGenerator")
-	@GenericGenerator(name="newGenerator",strategy="foreign",parameters={@Parameter(value="user",name="property")})	
-private int userid;
-	
-	@Column	
+	@GeneratedValue
 private int roleid;
 	
 	@Column
@@ -52,14 +48,7 @@ private boolean enabled;
 private User user;
 
 
-public int getUserid() {
-	return userid;
-}
 
-
-public void setUserid(int userid) {
-	this.userid = userid;
-}
 
 
 public int getRoleid() {

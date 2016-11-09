@@ -38,8 +38,9 @@ public class UserDAOImpl implements UserDAO {
     }
 
 	@Transactional
-	public User getUser(int userid) {
-		return (User)sessionFactory.getCurrentSession().get(User.class, userid);
+	public User getUser(String username) {
+		User user = (User) sessionFactory.getCurrentSession().createQuery("from User where un='"+username+"'").uniqueResult();
+		return user;
 		
 	}
 
